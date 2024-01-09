@@ -43,9 +43,11 @@ const command = new SlashCommand()
 		if (status === 1) {
 			return interaction.reply({
 				embeds: [
-					redEmbed(
-						`There is nothing after [${song.title}](${song.uri}) in the queue.`
-					),
+					new EmbedBuilder()
+						.setColor("Red")
+						.setDescription(
+							`There is nothing after [${song.title}](${song.uri}) in the queue.`
+						),
 				],
 			});
 		}
