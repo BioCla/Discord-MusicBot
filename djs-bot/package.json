@@ -35,7 +35,7 @@
 		"cron": "^2.4.4",
 		"discord.js": "^14.14.1",
 		"dotenv": "^16.4.2",
-		"erela.js": "^2.4.0",
+		"erela.js": "github:Tomato6966/erela.js#main",
 		"erela.js-deezer": "^1.0.7",
 		"express": "^4.18.2",
 		"fastify": "^4.26.0",
