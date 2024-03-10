@@ -124,7 +124,8 @@ const command = new SlashCommand()
 			await editReplyEmbed(redEmbed({ desc: "No results were found" }));
 		}
 
-		if (res.loadType === "TRACK_LOADED" || res.loadType === "SEARCH_RESULT") {
+		// Support both lavalink v4 and v3.
+		if (res.loadType === "TRACK_LOADED" || res.loadType === "SEARCH_RESULT" || res.loadType === "track" || res.loadType === "search") {
 			player.set("requester", interaction.guild.members.me);
 			addTrack(player, res.tracks[0]);
 
@@ -144,7 +145,7 @@ const command = new SlashCommand()
 			);
 		}
 
-		if (res.loadType === "PLAYLIST_LOADED") {
+		if (res.loadType === "PLAYLIST_LOADED" || res.loadType === "playlist") {
 			player.set("requester", interaction.guild.members.me);
 			addTrack(player, res.tracks);
 

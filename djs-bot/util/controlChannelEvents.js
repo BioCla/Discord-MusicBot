@@ -109,9 +109,11 @@ const handleMessageCreate = async (message) => {
 	const noMatches = searchResult.loadType === "NO_MATCHES";
 	const trackLoaded =
 		searchResult.loadType === "TRACK_LOADED" ||
-		searchResult.loadType === "SEARCH_RESULT";
+		searchResult.loadType === "SEARCH_RESULT" ||
+		searchResult.loadType === "track" ||
+		searchResult.loadType === "search";
 
-	const playlistLoaded = searchResult.loadType === "PLAYLIST_LOADED";
+	const playlistLoaded = searchResult.loadType === "PLAYLIST_LOADED" || searchResult.loadType === "playlist";
 
 	if (loadFailed || noMatches) {
 		playerDestroy();
