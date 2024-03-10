@@ -1,6 +1,12 @@
 // Allows for .env files to be imported and used
 require('dotenv').config()
 
+/**
+ * restVersion to use // "v4" or "v3"
+ */
+const restVersion = "v4"; // for default lavalink v4 will be use
+
+
 // exporting the module allows for other files to see all the properties in this file as a single object
 module.exports = {
 	/**
@@ -79,6 +85,7 @@ module.exports = {
 			retryAmount: 15, // for lavalink connection attempts
 			retryDelay: 6000, // Delay between reconnect attempts if connection is lost.
 			secure: false, // if lavalink is running SSL
+			version: restVersion, // whether to use Lavalink v4 or v3
 		},
 		{
 			identifier: "LocalNode", // log id string
@@ -88,6 +95,7 @@ module.exports = {
 			retryAmount: 15, // for lavalink connection attempts
 			retryDelay: 6000, // Delay between reconnect attempts if connection is lost.
 			secure: false, // if lavalink is running SSL
+			version: restVersion, // whether to use Lavalink v4 or v3
 		},
 	],
 
