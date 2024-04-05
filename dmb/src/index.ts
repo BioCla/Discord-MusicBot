@@ -16,6 +16,9 @@ const client = await createClient({
     intents: [
         Intents.GUILDS,
         Intents.GUILD_MESSAGES,
+
+        // VVVVVVVVVV PRIVILEGED INTENTS VVVVVVVVVV
+        // make sure to turn on these intent in your bot dev portal
         Intents.MESSAGE_CONTENT,
         Intents.GUILD_MEMBERS
     ],
