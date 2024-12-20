@@ -6,7 +6,7 @@ module.exports = {
 	/**
 	 * Name of the bot
 	 * @type {string} */
-	name: "InsertNameHereBot",
+	name: "Toni Storaro",
 	/**
 	 * Database option (mongodb, postgresql) https://www.prisma.io/docs/reference/database-reference/connection-urls
 	 * @type {string} */
